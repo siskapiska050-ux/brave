@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brawl Stars Ukraine - Головна</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&display=swap');
+
+    .hero-bg {
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+                  url('https://images.unsplash.com/photo-1611996575749-79a3ae8c0c9f?q=80&w=2070') center/cover no-repeat;
+      background-attachment: fixed;
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgb(250 204 21),
+                   0 0 60px rgb(234 179 8);
+    }
+
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #fbbf24;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover:after {
+      width: 100%;
+    }
+
+    .brawl-button {
+      transition: all 0.4s ease;
+    }
+    
+    .brawl-button:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 20px 25px -5px rgb(250 204 21 / 0.3);
+    }
+  </style>
+</head>
+<body class="bg-zinc-950 text-white overflow-x-hidden">
+
+  <!-- Навігація -->
+  <nav class="bg-black/95 backdrop-blur-lg border-b border-yellow-400/50 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-yellow-400 rounded-2xl flex items-center justify-center shadow-lg shadow-yellow-400/50">
+          <i class="fas fa-skull-crossbones text-3xl text-black"></i>
+        </div>
+        <div>
+          <h1 class="text-3xl font-black tracking-widest text-yellow-300">BRAWL STARS</h1>
+          <p class="text-[10px] text-zinc-500 -mt-1 tracking-widest">UKRAINE</p>
+        </div>
+      </div>
+
+      <div class="flex gap-10 text-lg font-medium">
+        <a href="index.html" class="nav-link text-yellow-400">Головна</a>
+        <a href="brawlers.html" class="nav-link hover:text-yellow-400 transition">Бравлери</a>
+        <a href="top-players.html" class="nav-link hover:text-yellow-400 transition">Топ гравців</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-bg h-screen flex items-center relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-zinc-950/70"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+      <div class="mb-6 inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-yellow-400/30">
+        <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+        <span class="text-sm font-medium">Онлайн: 248 391 гравців</span>
+      </div>
+
+      <h1 class="text-7xl md:text-8xl lg:text-[110px] font-black tracking-[-4px] leading-none mb-6 glow-text">
+        BRAWL<br>STARS
+      </h1>
+      
+      <p class="text-2xl md:text-3xl text-yellow-200 mb-12 max-w-2xl mx-auto font-light">
+        Збирай бравлерів.<br>Бийся до останнього.<br><span class="text-yellow-400">Перемагай!</span>
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-5 justify-center">
+        <a href="brawlers.html" 
+           class="brawl-button bg-yellow-400 hover:bg-amber-300 text-black font-bold text-xl px-14 py-6 rounded-2xl flex items-center justify-center gap-3 shadow-xl">
+          <i class="fas fa-users"></i>
+          Переглянути бравлерів
+        </a>
+        
+        <a href="top-players.html" 
+           class="brawl-button border-2 border-yellow-400 hover:bg-white/10 font-bold text-xl px-14 py-6 rounded-2xl flex items-center justify-center gap-3 transition">
+          <i class="fas fa-trophy"></i>
+          Топ гравців
+        </a>
+      </div>
+
+      <div class="mt-16 flex justify-center gap-8 text-sm">
+        <div class="flex items-center gap-2">
+          <i class="fas fa-gamepad text-yellow-400"></i>
+          <span>104+ бравлерів</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-bolt text-yellow-400"></i>
+          <span>12 режимів</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-globe text-yellow-400"></i>
+          <span>Глобальна гра</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Скрол індікатор -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
+      <span class="text-xs tracking-widest mb-2 text-zinc-400">Прокрути вниз</span>
+      <i class="fas fa-chevron-down animate-bounce text-2xl text-yellow-400"></i>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="py-24 bg-zinc-900">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold mb-8">Ласкаво просимо до найкращої мобільної гри!</h2>
+      <p class="text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+        Тут ти знайдеш актуальну інформацію про всіх бравлерів, свіжий Tier List, 
+        топ гравців світу та багато корисної інформації українською мовою.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-20 bg-black">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-zinc-900/70 border border-yellow-400/20 rounded-3xl p-10 hover:border-yellow-400/50 transition group">
+          <div class="w-16 h-16 bg-yellow-400/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+            <i class="fas fa-star text-4xl text-yellow-400"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Актуальний Tier List</h3>
+          <p class="text-zinc-400">Найсильніші бравлери поточного сезону з рекомендаціями по режимам.</p>
+        </div>
+
+        <div class="bg-zinc-900/70 border border-yellow-400/20 rounded-3xl p-10 hover:border-yellow-400/50 transition group">
+          <div class="w-16 h-16 bg-yellow-400/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+            <i class="fas fa-trophy text-4xl text-yellow-400"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Топ гравців</h3>
+          <p class="text-zinc-400">Світовий та український топ. Хто зараз на піку?</p>
+        </div>
+
+        <div class="bg-zinc-900/70 border border-yellow-400/20 rounded-3xl p-10 hover:border-yellow-400/50 transition group">
+          <div class="w-16 h-16 bg-yellow-400/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+            <i class="fas fa-robot text-4xl text-yellow-400"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Про ботів</h3>
+          <p class="text-zinc-400">Як розпізнавати ботів і на яких трофеях їх немає.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black py-16 border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-zinc-500">
+        Фанатський сайт Brawl Stars • Зроблено з ❤️ для українських гравців • 2026
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
