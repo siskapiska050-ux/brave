@@ -3,166 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Бравлери — Brawl Stars Ukraine</title>
+  <title>Brawl Stars Ukraine - Головна</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
   <style>
-    .brawler-card {
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&display=swap');
+
+    .hero-bg {
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+                  url('https://images.unsplash.com/photo-1611996575749-79a3ae8c0c9f?q=80&w=2070') center/cover no-repeat;
+      background-attachment: fixed;
+    }
+
+    .glow-text {
+      text-shadow: 0 0 30px rgb(250 204 21),
+                   0 0 60px rgb(234 179 8);
+    }
+
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #fbbf24;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover:after,
+    .nav-link.active:after {
+      width: 100%;
+    }
+
+    .brawl-button {
       transition: all 0.4s ease;
     }
-    .brawler-card:hover {
-      transform: translateY(-12px) scale(1.03);
-      box-shadow: 0 25px 50px -12px rgb(234 179 8 / 0.4);
+    
+    .brawl-button:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 20px 25px -5px rgb(250 204 21 / 0.3);
     }
-    .rarity-legendary { border-color: #facc15; }
-    .rarity-mythic { border-color: #c026d3; }
-    .rarity-epic { border-color: #8b5cf6; }
   </style>
 </head>
-<body class="bg-zinc-950 text-white">
+<body class="bg-zinc-950 text-white overflow-x-hidden">
 
   <!-- Навігація -->
   <nav class="bg-black/95 backdrop-blur-lg border-b border-yellow-400/50 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       <div class="flex items-center gap-4">
-        <div class="w-12 h-12 bg-yellow-400 rounded-2xl flex items-center justify-center">
+        <div class="w-12 h-12 bg-yellow-400 rounded-2xl flex items-center justify-center shadow-lg shadow-yellow-400/50">
           <i class="fas fa-skull-crossbones text-3xl text-black"></i>
         </div>
-        <h1 class="text-3xl font-black tracking-widest text-yellow-300">BRAWL STARS</h1>
+        <div>
+          <h1 class="text-3xl font-black tracking-widest text-yellow-300">BRAWL STARS</h1>
+          <p class="text-[10px] text-zinc-500 -mt-1 tracking-widest">UKRAINE</p>
+        </div>
       </div>
+
       <div class="flex gap-10 text-lg font-medium">
-        <a href="index.html" class="hover:text-yellow-400 transition">Головна</a>
-        <a href="brawlers.html" class="text-yellow-400">Бравлери</a>
-        <a href="top-players.html" class="hover:text-yellow-400 transition">Топ гравців</a>
+        <a href="index.html" class="nav-link text-yellow-400 active">Головна</a>
+        <a href="brawlers.html" class="nav-link hover:text-yellow-400 transition">Бравлери</a>
+        <a href="top-players.html" class="nav-link hover:text-yellow-400 transition">Топ гравців</a>
       </div>
     </div>
   </nav>
 
-  <div class="max-w-7xl mx-auto px-6 py-12">
-    <div class="text-center mb-12">
-      <h1 class="text-6xl font-black mb-4">Бравлери Brawl Stars</h1>
-      <p class="text-xl text-zinc-400">104 бравлери • Актуально на квітень 2026</p>
-    </div>
+  <!-- Hero Section -->
+  <section class="hero-bg h-screen flex items-center relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-zinc-950/70"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+      <div class="mb-6 inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-yellow-400/30">
+        <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+        <span class="text-sm font-medium">Онлайн: 248 391 гравців</span>
+      </div>
 
-    <!-- Tier List -->
-    <div class="mb-16">
-      <h2 class="text-4xl font-bold mb-8 flex items-center gap-4">
-        <i class="fas fa-crown text-yellow-400"></i> 
-        Tier List — Квітень 2026
-      </h2>
+      <h1 class="text-7xl md:text-8xl lg:text-[110px] font-black tracking-[-4px] leading-none mb-6 glow-text">
+        BRAWL<br>STARS
+      </h1>
       
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div class="bg-gradient-to-br from-red-600 to-orange-600 p-8 rounded-3xl">
-          <h3 class="text-2xl font-bold text-center mb-6">S-Tier (Найкращі)</h3>
-          <div class="space-y-4 text-lg">
-            <div class="flex justify-between"><span>Damian</span><span class="text-yellow-300">★</span></div>
-            <div class="flex justify-between"><span>Mortis</span></div>
-            <div class="flex justify-between"><span>Colt</span></div>
-            <div class="flex justify-between"><span>Crow</span></div>
-            <div class="flex justify-between"><span>Bibi</span></div>
-          </div>
-        </div>
+      <p class="text-2xl md:text-3xl text-yellow-200 mb-12 max-w-2xl mx-auto font-light">
+        Збирай бравлерів.<br>Бийся до останнього.<br><span class="text-yellow-400">Перемагай!</span>
+      </p>
 
-        <div class="bg-gradient-to-br from-amber-500 to-yellow-500 p-8 rounded-3xl text-black">
-          <h3 class="text-2xl font-bold text-center mb-6">A-Tier</h3>
-          <div class="space-y-4 text-lg">
-            <div>Edgar</div>
-            <div>Leon</div>
-            <div>Trunk</div>
-            <div>Gigi</div>
-            <div>Fang</div>
-          </div>
-        </div>
-
-        <div class="bg-zinc-800 p-8 rounded-3xl">
-          <h3 class="text-2xl font-bold text-center mb-6">B-Tier</h3>
-          <div class="space-y-4 text-lg">
-            <div>Shelly</div>
-            <div>Nita</div>
-            <div>Bull</div>
-            <div>Rico</div>
-            <div>Jessie</div>
-          </div>
-        </div>
-
-        <div class="bg-zinc-800 p-8 rounded-3xl">
-          <h3 class="text-2xl font-bold text-center mb-6">C-Tier</h3>
-          <div class="space-y-4 text-lg">
-            <div>El Primo</div>
-            <div>Poco</div>
-            <div>Bo</div>
-            <div>Tick</div>
-          </div>
-        </div>
+      <div class="flex flex-col sm:flex-row gap-5 justify-center">
+        <a href="brawlers.html" class="brawl-button bg-yellow-400 hover:bg-amber-300 text-black font-bold text-xl px-14 py-6 rounded-2xl flex items-center justify-center gap-3 shadow-xl">
+          <i class="fas fa-users"></i>
+          Переглянути бравлерів
+        </a>
+        
+        <a href="top-players.html" class="brawl-button border-2 border-yellow-400 hover:bg-white/10 font-bold text-xl px-14 py-6 rounded-2xl flex items-center justify-center gap-3 transition">
+          <i class="fas fa-trophy"></i>
+          Топ гравців
+        </a>
       </div>
     </div>
+  </section>
 
-    <!-- Галерея бравлерів -->
-    <h2 class="text-4xl font-bold mb-10">Всі бравлери</h2>
-    
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6" id="brawlers-grid">
-      <!-- Заповнюється через JavaScript -->
+  <!-- Welcome Section -->
+  <section class="py-24 bg-zinc-900">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold mb-8">Ласкаво просимо до найкращої мобільної гри!</h2>
+      <p class="text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+        Тут ти знайдеш актуальну інформацію про всіх бравлерів, свіжий Tier List, 
+        топ гравців світу та багато корисної інформації українською мовою.
+      </p>
     </div>
-  </div>
+  </section>
 
-  <script>
-    const brawlers = [
-      {name: "Shelly", rarity: "Common", color: "from-blue-500 to-cyan-500"},
-      {name: "Nita", rarity: "Rare", color: "from-green-500 to-emerald-500"},
-      {name: "Colt", rarity: "Rare", color: "from-amber-500 to-orange-500"},
-      {name: "Bull", rarity: "Rare", color: "from-red-500 to-rose-600"},
-      {name: "Mortis", rarity: "Epic", color: "from-purple-500 to-violet-600"},
-      {name: "Crow", rarity: "Legendary", color: "from-yellow-400 to-amber-300"},
-      {name: "Edgar", rarity: "Epic", color: "from-indigo-500 to-blue-600"},
-      {name: "Leon", rarity: "Legendary", color: "from-emerald-400 to-green-500"},
-      {name: "Bibi", rarity: "Epic", color: "from-pink-500 to-rose-500"},
-      {name: "Fang", rarity: "Epic", color: "from-orange-500 to-red-500"},
-      {name: "Damian", rarity: "Mythic", color: "from-fuchsia-500 to-purple-600"},
-      {name: "Trunk", rarity: "Mythic", color: "from-teal-500 to-cyan-500"},
-      {name: "Gigi", rarity: "Epic", color: "from-lime-400 to-green-400"},
-      {name: "Rico", rarity: "Super Rare", color: "from-sky-500 to-blue-500"},
-      {name: "Jessie", rarity: "Super Rare", color: "from-violet-500 to-purple-500"}
-    ];
-
-    function renderBrawlers(data) {
-      const container = document.getElementById('brawlers-grid');
-      container.innerHTML = '';
-
-      data.forEach(brawler => {
-        const card = document.createElement('div');
-        card.className = `brawler-card bg-zinc-900 rounded-3xl overflow-hidden border-2 border-transparent rarity-${brawler.rarity.toLowerCase()}`;
-        
-        card.innerHTML = `
-          <div class="h-56 bg-gradient-to-br ${brawler.color} flex items-center justify-center relative">
-            <span class="text-8xl font-black text-white/90 drop-shadow-2xl">${brawler.name[0]}</span>
-            ${brawler.rarity === 'Legendary' ? '<div class="absolute top-4 right-4 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full">LEGENDARY</div>' : ''}
-          </div>
-          <div class="p-5">
-            <h3 class="text-2xl font-bold">${brawler.name}</h3>
-            <p class="text-yellow-400 text-sm mt-1">${brawler.rarity}</p>
-          </div>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    // Пошук
-    const searchInput = document.createElement('input');
-    searchInput.type = "text";
-    searchInput.placeholder = "🔍 Пошук бравлера...";
-    searchInput.className = "w-full max-w-md mx-auto block bg-zinc-900 border border-zinc-700 rounded-full px-6 py-4 text-lg focus:outline-none focus:border-yellow-400 mb-10";
-
-    document.querySelector('h2').after(searchInput);
-
-    searchInput.addEventListener('input', (e) => {
-      const term = e.target.value.toLowerCase();
-      const filtered = brawlers.filter(b => b.name.toLowerCase().includes(term));
-      renderBrawlers(filtered);
-    });
-
-    // Початкове завантаження
-    renderBrawlers(brawlers);
-  </script>
+  <footer class="bg-black py-16 border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-zinc-500">
+        Фанатський сайт Brawl Stars • Зроблено з ❤️ для українських гравців • 2026
+      </p>
+    </div>
+  </footer>
 
 </body>
 </html>
